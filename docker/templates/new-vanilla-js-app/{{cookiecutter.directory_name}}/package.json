@@ -1,0 +1,19 @@
+{
+  "name": "{{cookiecutter.app_name}}",
+  "author": "DataMade <info@datamade.us>",
+  "version": "0.0.0",
+  "description": "{{cookiecutter.app_description}}",
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "core-js": "^3.15.2",
+    "watchify": "^4.0.0"
+  },
+  "scripts": {
+    "develop": "yarn install && (watchify -t [ babelify --global ] js/main.js -o js/bundle.js & python3 -m http.server)",
+    "build": "yarn install && browserify -t [ babelify --global ] js/main.js -o js/bundle.js"
+  },
+  "license": "MIT"
+}

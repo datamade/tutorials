@@ -1,22 +1,52 @@
-# The DataMade Gatsby Stack
+# The DataMade JavaScript Stack
 
-A number of tools comprise our development stack for Gatsby project. They are:
+A number of tools comprise our development stack for projects written in or
+containing JavaScript.
 
-1. [Gatsby](https://www.gatsbyjs.org/) (obviously) - static site generator
+## Static sites
+
+### Vanilla JavaScript
+
+1. [ES6](http://es6-features.org/) - A number of big improvements to core JavaScript syntax
+2. [Yarn](https://yarnpkg.com/) - package manager
+3. [Browserify](https://browserify.org/) - build tool to bundle dependencies with code
+4. [Babelify](https://www.npmjs.com/package/babelify) - Browserify plug-in that transpiles ES6 to ES5 for browser compatibility using [Babel](https://babeljs.io/)
+5. [Watchify](https://www.npmjs.com/package/watchify) - build tool to update bundled/transpiled code during development
+6. [GitHub Pages](https://pages.github.com/) or [Netlify](https://www.netlify.com/) - deployment platforms
+
+### Gatsby 
+
+1. [Gatsby](https://www.gatsbyjs.org/) - static site generator
 2. [React](https://reactjs.org/) - JavaScript framework for building user interfaces
-3. [Node.js](https://nodejs.org/en/) / [npm](https://www.npmjs.com/) - runtime environment (run JavaScript outside of a browser) and bundled package manager
-4. [Yarn](https://yarnpkg.com/) - package manager
-5. [ESLint](https://eslint.org/) - linter
+3. [Yarn](https://yarnpkg.com/) - package manager
+4. [ESLint](https://eslint.org/) - linter
 5. [Netlify](https://www.netlify.com/) - deployment platform
 6. [Docker](https://www.docker.com/products/docker-desktop) / [Docker Compose](https://docs.docker.com/compose/) - container engine
 
+## Django/React Integration
+
+1. [ES6](http://es6-features.org/) - A number of big improvements to core JavaScript syntax
+2. [React](https://reactjs.org/) - JavaScript framework for building user interfaces
+3. [Yarn](https://yarnpkg.com/) - package manager
+4. [Browserify](https://browserify.org/) - build tool to bundle dependencies with code
+5. [Babelify](https://www.npmjs.com/package/babelify) - Browserify plug-in that transpiles ES6 to ES5 for browser compatibility using [Babel](https://babeljs.io/)
+
 ## Some example setups
 
-Building a Gatsby project? Check out these projects from the DataMade team for example architecture and component design patterns.
+### Vanilla JavaScript
+
+- Buildless: [IHS Displacement Risk Map](https://github.com/datamade/ihs-displacement-risk-in-chicago)
+- Bundled code and dependencies: [NWSS Demo Site](https://github.com/datamade/nwss-data-standard)
+
+### Gatsby
 
 - Basic static app: [`static-app-template`](https://github.com/datamade/static-app-template/) (to be iterated upon)
 - Static app with `recharts` charts: [`how-to-recharts`](https://github.com/datamade/how-to-recharts/)
 - Static app with `react-leaflet` map: [`lisc-cnda-map`](https://github.com/datamade/lisc-cnda-map/)
+
+## React in Django
+
+Integrating React with Django? See [the docs on our approach](https://github.com/datamade/how-to/blob/master/django/django-react-integration.md).
 
 ## Managing packages and plugins
 
@@ -38,7 +68,7 @@ error Command "yarn" not found.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
-\- this is almost certainly the problem! Run your commands like this, instead:
+- this is almost certainly the problem! Run your commands like this, instead:
 
 ```bash
 # The application's entry point is "yarn" so we only need to pass the "add" command.

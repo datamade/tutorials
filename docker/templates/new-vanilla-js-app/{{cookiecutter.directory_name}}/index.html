@@ -1,0 +1,102 @@
+{% raw %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% endraw %}{{cookiecutter.app_verbose_name}}{% raw %}</title>
+
+    <meta content="Description TK" name="description" />
+    <meta content="Author TK" name="author" />
+
+    <!-- Facebook metadata -->
+    <meta property="og:site_name" content="{% endraw %}{{cookiecutter.app_verbose_name}}{% raw %}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Title TK">
+    <meta property="og:description" content="Description TK">
+    <meta property="og:url" content="URL TK">
+    <meta property="og:image" content="Image TK">
+
+    <!-- Twitter metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{% endraw %}{{cookiecutter.app_verbose_name}}{% raw %}">
+    <meta name="twitter:creator" content="Creator TK">
+    <meta name="twitter:title" content="Title TK">
+    <meta name="twitter:url" content="URL TK">
+    <meta name="twitter:description" content="Description TK">
+    <meta name="twitter:image" content="Image TK">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Load fonts, if necessary -->
+    <!-- link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400,700&display=swap" rel="stylesheet" -->
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark pl-2 pl-md-4">
+      <div class="justify-content-left va-container">
+        <a class="navbar-brand" href="/">
+          <div id="navbar-title" class="d-inline-block">
+            <span class="d-none d-sm-inline navbar-title-text">
+              {% endraw %}{{cookiecutter.app_verbose_name}}{% raw %}
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="justify-content-right">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-supported-content"
+          aria-controls="navbar-supported-content"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-supported-content">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="main-body">
+      <div class="mt-3 mt-lg-5 mb-5">
+        <h1>Hello, world!</h1>
+      </div>
+    </div>
+
+    <footer class="footer bg-dark text-light pt-5 pb-3">
+      <div class="container-fluid text-center">
+        <h3 class="mb-1">
+          {% endraw %}{{cookiecutter.app_verbose_name}}{% raw %}
+        </h3>
+        <p>
+        <p class="mt-3">
+          Website by <a href="https://datamade.us" target="_blank">DataMade</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="js/bundle.js"></script>
+
+    <!-- Load Google Tag Manager for analytics (no-op until APIKEY is set) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=APIKEY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'APIKEY');
+    </script>
+  </body>
+</html>{% endraw %}
