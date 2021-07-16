@@ -137,6 +137,8 @@ Note that review app config vars cannot yet be set using the CLI, but you can se
 the Heroku dashboard by navigating to the pipeline home page and visiting
 `Settings > Review Apps > Review app config vars` in the nav.
 
+You can also set them in the `app.json` file, but only set non-sensitive values since that file is committed to version control. See [this code for an example](https://github.com/datamade/ca-wastewater-surveillance-system/blob/fecd93d7f91b892c5b63a921d954a941a723c383/app.json#L5), and the Heroku docs for [more information about the `app.json` schema](https://devcenter.heroku.com/articles/app-json-schema).
+
 Also note that while `DATABASE_URL` is probably required by your application, you don't actually
 need to set it yourself. The Heroku Postgres add-on will [automatically define this
 variable](https://devcenter.heroku.com/articles/heroku-postgresql#designating-a-primary-database)
